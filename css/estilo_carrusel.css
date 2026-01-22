@@ -1,0 +1,7 @@
+#idCarrusel{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color:bisque;
+}

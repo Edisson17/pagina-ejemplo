@@ -1,0 +1,30 @@
+.botonImagen {
+    /* Cambié estas propiedades para posicionar dentro de cada imagen */
+    position: relative;
+    bottom: 60px; /* Ajusta según necesites */
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.botonImagen:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.carrusel img {
+    width: 400px;
+    height: 250px;
+    display: block; /* Para evitar espacios extra */
+}
+.imagenDiv {
+    position: relative; /* Esto es clave para que el botón se posicione relativo a cada imagen */
+    width: 400px;
+    height: 250px;
+}

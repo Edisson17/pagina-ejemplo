@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel CSS</title>
+<link rel="stylesheet" href="css/movimiento_carrusel.css">
+<link rel="stylesheet" href="css/estilo_carrusel.css">
+<link rel="stylesheet" href="css/boton_imagen.css">
+</head>
+<style>
+    .botonImagen {
+    /* Cambié estas propiedades para posicionar dentro de cada imagen */
+    position: absolute;
+    bottom: 20px; /* Ajusta según necesites */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.botonImagen:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#idCarrusel {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: bisque;
+}
+
+.carrusel {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar botones absolutos */
+}
+
+.carrusel-contenido {
+    display: flex;
+    width: 1200px;
+    animation: slide 9s infinite;
+}
+
+.carrusel img {
+    width: 400px;
+    height: 250px;
+    display: block; /* Para evitar espacios extra */
+}
+
+.imagenDiv {
+    position: relative; /* Esto es clave para que el botón se posicione relativo a cada imagen */
+    width: 400px;
+    height: 250px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-400px); }
+    66% { transform: translateX(-800px); }
+    100% { transform: translateX(0); }
+}
+
+/* Si quieres pausar la animación al pasar el mouse */
+.carrusel:hover .carrusel-contenido {
+    animation-play-state: paused;
+}
+</style>
+<body>
+    
+    <div id="idCarrusel" class="carrusel">
+        <div class="carrusel-contenido">
+            <div class="imagenDiv">
+                <img src="img/img1.jpg">
+                <a href="pagina1.html" class="botonImagen">Ver más</a>
+            </div>
+            
+            <div class="imagenDiv">
+                <img src="img/img2.jpg">
+                <a href="pagina2.html" class="botonImagen">Ver más</a>
+            </div>
+            
+            <div class="imagenDiv">
+                <img src="img/img3.jpg">
+                <a href="pagina3.html" class="botonImagen">Ver más</a>
+            </div>    
+        </div>
+    </div>
+    
+</body>
+</html>
