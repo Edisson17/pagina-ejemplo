@@ -7,8 +7,30 @@
         <link rel="stylesheet" href="css/estilo_carrusel.css">
         <link rel="stylesheet" href="css/boton_imagen.css">
         <script src="js/ancho_imagen.js"></script>
-    </head>
+        <script src="js/boton_iqz_derecha.js" defer></script>
+    <style>
+         .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
 
+    .controls button {
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .controls button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    </style>
 <body>
     <script>
         cambiarAnchoImagenCSS(400);
@@ -33,6 +55,15 @@
             
         </div>
 
+        <!--Seccion botones derecha izquierda-->
+
+        <div class="controls">
+            <button onclick="prevImage()">❮</button>
+            <button onclick="nextImage()">❯</button>
+        </div>
+
+    </div>
+
     </div>
 
     <h1>El audio es</h1>
@@ -42,5 +73,7 @@
         Tu navegador no soporta audio HTML5.
     </audio>
     
+    
+
 </body>
 </html>

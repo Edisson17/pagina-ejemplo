@@ -7,11 +7,25 @@
   overflow: hidden;
 }
 
+/*
 .carrusel-contenido {
   display: flex;
   width: var(--ancho-carrusel);
   animation: slide 20s infinite;
 }
+*/
+.carrusel-contenido {
+  display: flex;
+  width: calc(3 * var(--ancho-carrusel)); /*calc(3 * var(--ancho-carrusel))*/
+  animation: slide 20s infinite linear;
+}
+
+.carrusel-contenido.manual {
+  animation: none;
+  transition: transform 5s ease;
+}
+
+
 
 @keyframes slide {
   0% { transform: translateX(0); }

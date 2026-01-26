@@ -7,5 +7,35 @@
 </head>
 <body>
     <h1>Bienvenido a perro</h1>
+    <div class="carousel">
+    <img src="img/img1.jpg" class="active" alt="nada1">
+    <img src="img/img2.jpg" class="active" alt="nada2">
+    <img src="img/img3.jpg" class="active" alt="nada3">
+
+    <div class="controls">
+      <button onclick="prevImage()">❮</button>
+      <button onclick="nextImage()">❯</button>
+    </div>
+  </div>
+
+  <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showImage(index) {
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+        }
+
+        function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+        }
+
+        function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+        }
+  </script>
 </body>
 </html>
