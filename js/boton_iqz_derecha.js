@@ -17,19 +17,19 @@ function activarManual() {
 
   autoTimer = setTimeout(() => {
     volverAuto();
-  }, 4000); // ⏱ 4 segundos sin tocar nada
+  }, 4000); //  4 segundos sin tocar nada
 }
 
 function volverAuto() {
-  // Forzamos la posición actual como punto inicial
+  // Fuerza la posición actual como punto inicial
   contenido.classList.remove('manual');
 
-  // Truco clave: reiniciar animación desde índice actual
+  //reiniciar animación desde índice actual
   contenido.style.animation = 'none';
   void contenido.offsetWidth; // reflow
   contenido.style.animation = '';
 
-  // Ajustamos el delay para que continúe desde donde quedó
+  // Ajustamos el delay para que continúe donde quedo
   const duracion = 20; // segundos (igual al CSS)
   const delay = -(duracion / total) * currentIndex;
   contenido.style.animationDelay = `${delay}s`;
