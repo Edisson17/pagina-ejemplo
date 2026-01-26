@@ -1,5 +1,8 @@
+:root {
+    --ancho-carrusel: 1000px;
+}
 #idCarrusel{
-    width: 80%;
+    width: var(--ancho-carrusel);
     margin: auto;
     overflow: hidden;
     position: relative;

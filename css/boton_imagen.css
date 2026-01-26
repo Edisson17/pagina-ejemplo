@@ -1,8 +1,11 @@
+:root {
+    --ancho-carrusel: 1000px;
+}
 .botonImagen {
     /* Cambié estas propiedades para posicionar dentro de cada imagen */
-    position: relative;
+    position: absolute;
     bottom: 60px; /* Ajusta según necesites */
-    left: 40%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     padding: 10px 20px;
@@ -19,12 +22,12 @@
     background-color: rgba(0, 0, 0, 0.9);
 }
 .carrusel img {
-    width: 400px;
+    width: var(--ancho-carrusel);
     height: 250px;
     display: block; /* Para evitar espacios extra */
 }
 .imagenDiv {
     position: relative; /* Esto es clave para que el botón se posicione relativo a cada imagen */
-    width: 400px;
+    width: var(--ancho-carrusel);
     height: 250px;
 }
